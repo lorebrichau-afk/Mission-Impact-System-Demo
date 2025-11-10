@@ -42,7 +42,6 @@ You are writing on behalf of Treeplan, an environmental NGO, to a fundraiser nam
 Data for {month}:
 - Donors acquired: {donors}
 - Average donor tenure: {tenure} months
-- Monthly donation per donor: €{monthly_donation}
 - Estimated lifetime donation: €{lifetime_donation:.0f}
 - Estimated trees funded: {trees}
 
