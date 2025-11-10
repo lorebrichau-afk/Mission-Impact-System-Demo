@@ -54,7 +54,7 @@ if uploaded_file is not None:
             )
 
             # 5. Generate message button
-            if st.button("Generate impact message for Lore"):
+            if st.button("Generate impact message"):
                 prompt = f"""
 You are writing on behalf of Treeplan, an environmental NGO,
 to a fundraiser named Lore.
