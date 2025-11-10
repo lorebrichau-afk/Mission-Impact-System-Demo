@@ -91,7 +91,7 @@ Write a recognition email in 90–140 words:
 
                     email_text = response.choices[0].message.content.strip()
 
-                    st.subheader("Generated email for Lore")
+                    st.subheader("Generated email for Fundraisers")
 
                     # Editable email box
                     edited_email = st.text_area("Edit the email before sending:", value=email_text, height=250)
