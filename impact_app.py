@@ -44,7 +44,7 @@ if uploaded_file is not None:
             - Avg tenure: {tenure} months
             - Monthly donation: €{monthly}
             - Estimated trees funded: {trees}
-            Tone: warm, concrete, professional. No emojis or exclamation marks.
+            Tone: warm, concrete, professional. Emojis and exclamation marks.
             Start with 'Hi Lore,' and end with 'Warm regards,' and 'The Treeplan Team'.
             """
 
