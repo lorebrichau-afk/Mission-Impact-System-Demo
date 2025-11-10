@@ -35,7 +35,7 @@ if uploaded_file is not None:
             "Trees_Funded": trees,
         })
 
-         if st.button("Generate impact message for Lore"):
+        if st.button("Generate impact message for Lore"):
             prompt = f"""
 You are writing on behalf of Treeplan, an environmental NGO, to a fundraiser named Lore.
 
