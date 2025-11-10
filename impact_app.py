@@ -68,7 +68,7 @@ Data for {month}:
 
 Write a recognition email in 90–140 words:
 - Start with "Hi Lore,"
-- Clearly mention the {trees} trees planted and connect it to a relatable image
+- Clearly mention the {trees} trees Lore planted and connect it to a relatable image
   (for example: "about two soccer fields of new forest").
 - Tone: warm, appreciative, concrete, and professional, with a bit of heart.
 - You may use one nature-related emoji if it fits naturally, and at most one exclamation mark.
