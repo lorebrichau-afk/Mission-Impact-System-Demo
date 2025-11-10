@@ -35,10 +35,9 @@ if uploaded_file is not None:
             "Trees_Funded": trees,
         })
 
-        if st.button("Generate impact message for Lore"):
+         if st.button("Generate impact message for Lore"):
             prompt = f"""
-You are writing on behalf of Treeplan, an environmental NGO,
-to a fundraiser named Lore.
+You are writing on behalf of Treeplan, an environmental NGO, to a fundraiser named Lore.
 
 Data for {month}:
 - Donors acquired: {donors}
@@ -47,18 +46,22 @@ Data for {month}:
 - Estimated lifetime donation: €{lifetime_donation:.0f}
 - Estimated trees funded: {trees}
 
-Write a recognition email in 90–140 words:
+Write a recognition email in 90-140 words:
 - Start with "Hi Lore,"
-- Clearly mention the {trees} trees planted and connect it to a relatable image (like "two soccer fields of forest").
-- Tone: warm, appreciative, and professional.
+- Clearly mention the {trees} trees and compare it to one concrete image
+  (for example: "about two soccer fields of new forest").
+- Tone: warm, appreciative, specific, and human.
 - You may use one subtle tree emoji if it fits naturally, and at most one exclamation mark.
-- End with "Warm regards," and a Treeplan-style signature.
-"""
+- End with "Warm regards," and "The Treeplan Team".
+""".strip()
 
             response = client.chat.completions.create(
                 model="gpt-4.1-mini",
                 messages=[
-                    {"role": "system", "content": "You write sincere appreciation emails for NGO fundraisers."},
+                    {
+                        "role": "system",
+                        "content": "You write sincere, concrete appreciation emails for NGO fundraisers."
+                    },
                     {"role": "user", "content": prompt},
                 ],
                 max_tokens=260,
@@ -66,5 +69,6 @@ Write a recognition email in 90–140 words:
             )
 
             email_text = response.choices[0].message.content.strip()
+
             st.subheader("Generated email")
             st.write(email_text)
