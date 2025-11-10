@@ -39,7 +39,7 @@ if uploaded_file is not None:
             trees = int(lifetime_donation / 2)  # €2 per tree
 
             # Show inputs so people see what the AI is based on
-            st.subheader("Lore's impact data")
+            st.subheader("Impact data")
             st.write(
                 {
                     "Name": lore_row["Name"],
