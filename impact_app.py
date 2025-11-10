@@ -36,7 +36,8 @@ if uploaded_file is not None:
         })
 
         if st.button("Generate impact message for Lore"):
-            prompt = f"""You are writing on behalf of Treeplan, an environmental NGO,
+            prompt = f"""
+You are writing on behalf of Treeplan, an environmental NGO,
 to a fundraiser named Lore.
 
 Data for {month}:
@@ -48,11 +49,11 @@ Data for {month}:
 
 Write a recognition email in 90–140 words:
 - Start with "Hi Lore,"
-- Clearly mention the {trees} trees planted and connect it to a relatable image (like “two soccer fields of forest”).
+- Clearly mention the {trees} trees planted and connect it to a relatable image (like "two soccer fields of forest").
 - Tone: warm, appreciative, and professional.
-- Emojis or exclamation marks.
-- End with “Warm regards,” and a Treeplan-style signature.
-            """
+- You may use one subtle tree emoji if it fits naturally, and at most one exclamation mark.
+- End with "Warm regards," and a Treeplan-style signature.
+"""
 
             response = client.chat.completions.create(
                 model="gpt-4.1-mini",
