@@ -39,9 +39,8 @@ if uploaded_file is not None:
             prompt = f"""
 You are writing on behalf of Treeplan, an environmental NGO, to a fundraiser named Lore.
 
-Data for {month}:
+Data for:
 - Donors acquired: {donors}
-- Average donor tenure: {tenure} months
 - Estimated lifetime donation: €{lifetime_donation:.0f}
 - Estimated trees funded: {trees}
 
