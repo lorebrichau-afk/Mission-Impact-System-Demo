@@ -93,11 +93,14 @@ Write a recognition email in 90–140 words:
 
                     st.subheader("Generated email for Lore")
 
-# Editable email box
-edited_email = st.text_area("Edit the email before sending:", value=email_text, height=250)
+                    # Editable email box
+                    edited_email = st.text_area("Edit the email before sending:", value=email_text, height=250)
 
-# Mock send button
-if st.button("Send to employees"):
-    st.success("✅ Email successfully sent to employees!")
-    st.info("📨 The following message was 'sent':")
-    st.write(edited_email)
+                    # Mock send button
+                    if st.button("Send to employees"):
+                        st.success("✅ Email successfully sent to employees!")
+                        st.info("📨 The following message was 'sent':")
+                        st.write(edited_email)
+
+                except Exception as e:
+                    st.error(f"Error generating message: {e}")
