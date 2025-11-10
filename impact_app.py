@@ -8,8 +8,8 @@ client = OpenAI()
 st.title("Treeplan Impact Message Demo")
 
 st.write(
-    "Upload the Excel_Employee_Data.xlsx file to generate Lore's impact email "
-    "for 2025-10 based on her fundraiser results."
+    "Upload the Excel_Employee_Data.xlsx file to generate the impact email "
+    "for 2025-10 based on employee performance results."
 )
 
 uploaded_file = st.file_uploader("Upload Excel_Employee_Data.xlsx", type=["xlsx"])
